@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title> Colaborador | Dados de Login </title>
+	<link rel="stylesheet" type="text/css" href="css/cadPT3.css">
+	<style>
+	body{background: url("img/fundo4.jpg") no-repeat fixed; background-size: 100%;}
+	hr{border: 1px solid #000;}
+	h4,h5{position: relative; left: 5px;}
+	</style>
+	<script>
+	//verificando campos
+		function validarCampos(){
+			var user = document.getElementById("user").value;
+			var senha = document.getElementById("senha").value;
+			var confsenha = document.getElementById("confsenha").value;
+			
+			if(user=="" || senha=="" || confsenha==""){
+				return alert("Por favor, preencha todos os campos!");
+			}
+			else{
+				return confSenha();
+			}
+		}
+		
+		function confSenha(){
+			var senha = document.getElementById("senha").value;
+			var confsenha = document.getElementById("confsenha").value;
+			if(senha!=confsenha){
+				return alert("As senhas devem ser iguais!");
+			}
+			else{
+				return document.getElementById('cadastro').innerHTML = '<a href="principalPT.html" id="cadastro"><div class="link0"><center>Cadastrar</div></a>';
+			}
+		}
+	</script>
+</head>
+
+<body> 
+	<div class="formulario">
+		<center><h2> Ainda não tem conta? <br> Trabalhe Conosco! </h2></center>
+		<hr>
+			<h4> Dados de Login </h4>
+		<hr>
+			<center><h3>Email: </h3>
+            <input type="text" id="user" placeholder="  ex: exemplo@email.com" size="60"> *</input><br/><br/>
+            <h3>Senha: </h3>
+            <input type="password" id="senha" placeholder="  ********" size="30"> *</input><br/><br/>
+			<h3>Confirme sua senha: </h3>
+            <input type="password" id="confsenha" placeholder="  ********" size="30"> * <hr><br>
+			<p> Para confirmarmos que você é um profissional autenticado, precisamos
+			<br> de uma foto do seu certificado.<br> Por favor, insira a imagem abaixo: </p>
+			<br>
+			<input type="file" name="arquivos" id="certificado" accept="image/png, image/jpeg"/></input><br>
+			<br><br>
+			<button type="button" name="enviar" id="enviar" onclick="">Enviar</button><br><br>
+			<hr><br>
+			<a onclick="validarCampos()" id="cadastro"><div class="link0">Cadastrar</div></a> ou 
+			<a href="loginPT.html"><div class="link1">Logue-se</div></a></center><br>
+	</div>
+	
+	<header>
+		<center><img src="img/logo4.png" height="60px" width="60px"></center>
+		<a href="cadastroPT.html"><div class="voltar"><img src="img/voltar.png" height="25px" width="25px"></img></div></a>
+		<center><div class="colaborador">
+			COLABORADOR
+		</div></center>
+	</header>
+</body>
+</html>

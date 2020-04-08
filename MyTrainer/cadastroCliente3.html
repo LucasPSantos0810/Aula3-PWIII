@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title> Cadastro | Dados de Login </title>
+	<link rel="stylesheet" type="text/css" href="css/cadCliente3.css">
+	<style>
+	body{background: url("img/fundo4.jpg") no-repeat fixed; background-size: 100%;}
+	hr{border: 1px solid #000;}
+	h4,h5{position: relative; left: 5px;}
+	</style>
+	<script>
+	//verificando campos
+		function validarCampos(){
+			var user = document.getElementById("user").value;
+			var senha = document.getElementById("senha").value;
+			var confsenha = document.getElementById("confsenha").value;
+			
+			if(user=="" || senha=="" || confsenha==""){
+				return 	alert("Por favor, preencha todos os campos!");
+			}
+			else{
+				return confSenha();
+			}
+		}
+		
+		function confSenha(){
+			var senha = document.getElementById("senha").value;
+			var confsenha = document.getElementById("confsenha").value;
+			var recarregar = document.getElementById('cadastro').innerHTML = '<a href="cadastroCliente3.html" id="cadastro"><div class="link0"><center>Cadastrar</div></a>';
+			
+			if(senha!=confsenha){
+				return alert("As senhas devem ser iguais!");
+			}
+			else{
+				return document.getElementById('cadastro').innerHTML = '<a href="PrincipalCliente.html" id="cadastro"><div class="link0"><center>Cadastrar</div></a>';
+			}
+		}
+	</script>
+</head>
+<body> 
+	<div class="formulario">
+		<center><h3> Ainda não tem conta? <br> Entre para o time! </h3></center>
+		<hr>
+			<h4> Dados de Login </h4>
+		<hr>
+			<center><h3>Email: </h3>
+            <input type="text" id="user" placeholder="  ex: exemplo@email.com" size="60"> *<br>
+            <h3>Senha: </h3>
+            <input type="password" id="senha" placeholder="  ********" size="30"> * <br>
+			<h3>Confirmar senha: <h3>
+            <input type="password" id="confsenha" placeholder="  ********" size="30"> * </h3><br><hr><br>
+			<a onclick="validarCampos()" id="cadastro"><div class="link0">Cadastrar</div></a> ou 
+			<a href="loginCliente.html"><div class="link1">Logue-se</div></a></center><br>
+	</div>
+	
+	<header>
+		<center><img src="img/logo4.png" height="60px" width="60px"></center>
+		<a href="cadastroCliente2.html"><div class="voltar"><img src="img/voltar.png" height="25px" width="25px"></img></div></a>
+	</header>
+</body>
+</html>

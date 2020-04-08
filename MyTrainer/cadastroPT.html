@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title> Colaborador | Dados Pessoais </title>
+	<link rel="stylesheet" type="text/css" href="css/cadPT.css">
+	<style>
+	body{background: url("img/fundo4.jpg") no-repeat fixed; background-size: 100%;}
+	hr{border: 1px solid #000;}
+	h4,h5{position: relative; left: 5px;}
+	</style>
+	<script>
+	//verificando campos
+		function validarCampos(){
+			var nome = document.getElementById("nome").value;
+			var snome = document.getElementById("sobrenome").value;
+			var datanasc = document.getElementById("datanasc").value;
+			var rg = document.getElementById("rg").value;
+			var cpf = document.getElementById("cpf").value;
+			var recarregar = document.getElementById('cadastro').innerHTML = '<a href="cadastroPT.html" id="cadastro"><div class="link0"><center>Próximo</div></a>';
+			
+			if(nome=="" || snome=="" || datanasc=="" || rg=="" || cpf==""){
+				alert("Por favor, preencha todos os campos!");
+				return recarregar;
+			}
+			else{
+				return document.getElementById('cadastro').innerHTML = '<a href="CadastroPT2.html" id="cadastro"><div class="link0"><center>Próximo</div></a>';
+			}
+		}
+	</script>
+</head>
+
+<body> 
+	<div class="formulario">
+		<center><h2> Ainda não tem conta? <br> Trabalhe Conosco! </h2></center>
+		<hr>
+			<h4> Dados Pessoais </h4>
+		<hr>
+			<h5>Nome: 
+			<input type="text" id="nome" placeholder="  ex: carlos" size="20"> * </h5>
+			<h5>Sobrenome:
+			<input type="text" id="sobrenome" placeholder="  ex: marques" size="23"> * </h5>
+			<h5>Data de Nascimento:
+			<input type="long" id="datanasc" placeholder="  ex: dd/mm/aaaa" size="10"> * </h5>
+			<h5>RG:
+			<input type="long" id="rg" placeholder="  ex: 12.345.678/9" size="17"> * </h5>
+			<h5>CPF:
+			<input type="long" id="cpf" placeholder="  ex: 123456789-01" size="23"> *</h5>
+            <h5>Telefone:
+			<input type="long" id="phone" placeholder="  ex: (11)1234-5678" size="17"> </h5>
+			<h5>Celular:
+			<input type="long" id="celular" placeholder="  ex: (11)91234-5678" size="23"> </h5><hr><br>
+			<center><a onclick="validarCampos()" id="cadastro"><div class="link0">Próximo</div></a> ou 
+			<a href="loginPT.html"><div class="link1">Logue-se</div></a></center><br>
+	</div>
+	
+	<header>
+		<center><img src="img/logo4.png" height="60px" width="60px"></center>
+		<a href="index.html"><div class="voltar"><img src="img/voltar.png" height="25px" width="25px"></img></div></a>
+		<center><div class="colaborador">
+			COLABORADOR
+		</div></center>
+	</header>
+</body>
+</html>
